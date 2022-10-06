@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <title>Counter</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <h1>Counter</h1>
+        <h2>You visited the site {{session["count"]}}</h2>
+        <form action="/count" method="post">
+            <button type="submit" name="counter" value="add2" style="background-color: rgb(28, 196, 28);">Add 2</button>
+            <button type="submit" name="counter" value="reset" style="background-color: rgb(168, 33, 33);">Reset Count</button>
+        </form>
+    </body>
+</html>
